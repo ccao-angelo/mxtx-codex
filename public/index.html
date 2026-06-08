@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MXTX Character Codex</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <main class="container">
+            <nav>
+                <ul></ul> <ul>
+                    <li>
+                        <select id="lang-toggle" aria-label="Select Language">
+                            <option value="en">🇬🇧 English</option>
+                            <option value="vn">🇻🇳 Tiếng Việt</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+            <hgroup>
+                <h1 id="page-title"> 🗡️ The MXTX Codex</h1>
+                <h2 id="page-subtitle">A directory of Cultivators, Gods, and Ghost Kings.</h2>
+            </hgroup>
+
+            <div id="character-grid" class="grid">
+                <span aria-busy="true">Loading codex...</span>
+            </div>
+        </main>
+
+        <script src="/app.js"></script>
+    </body>
+</html>

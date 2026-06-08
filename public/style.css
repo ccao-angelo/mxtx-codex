@@ -1,0 +1,121 @@
+/* public/style.css */
+/* --- GLOBAL VARIABLES & PICO OVERRIDES --- */
+[data-theme="dark"] {
+    --primary: #d4af37; /* Metallic Gold */
+    --primary-hover: #f1c40f;
+    --background-color: #0d0d12; /* Deep void night sky */
+    --h1-color: #d4af37;
+    --h2-color: #e0e0e0;
+    --h3-color: #d4af37;
+    --color: #c4c4cc; /* Soft silver for readable text */
+    
+    /* Font Overrides */
+    --font-family: 'Lora', serif;
+    
+    /* Card aesthetics */
+    --card-background-color: rgba(25, 25, 35, 0.6);
+    --card-border-color: rgba(212, 175, 55, 0.2);
+    --card-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Apply the cinematic font to all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
+}
+
+/* A mystical gradient background for the whole app */
+body {
+    background: radial-gradient(circle at top center, #1a1a2e 0%, #050505 100%);
+    background-attachment: fixed;
+}
+
+/* --- MAIN CODEX GRID & CARDS --- */
+#character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Glassmorphism & Hover Animations for the Cards */
+article {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The magic "lift and glow" effect when you hover over a character */
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.6);
+}
+
+article header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+article footer {
+    margin-top: auto; /* Pushes the button to the bottom of the card */
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Uniform Image Sizing (Fixes messy Pinterest/FB dimensions!) */
+article img {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Forces all portraits to be the exact same height/width ratio */
+    object-fit: cover; /* Crops nicely without squishing */
+    object-position: top; /* Focuses on the character's face */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- DETAIL PAGE (character.html) --- */
+#character-details {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+#character-details header {
+    text-align: center;
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+#character-details h2 {
+    color: #a0a0a0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+#character-details img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--card-border-color);
+}
+
+/* --- CUSTOM SCROLLBAR (Webkit Browsers) --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
