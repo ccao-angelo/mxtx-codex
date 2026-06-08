@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 - [x] Utilized CSS `aspect-ratio` and `object-fit` to force uniform portrait dimensions across all dynamically generated character cards.
 
 ## Video Walkthrough
-
+<a href="https://i.imgur.com/GoTcGYd.gif">https://i.imgur.com/GoTcGYd.gif</a>
 <img src='https://i.imgur.com/GoTcGYd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
